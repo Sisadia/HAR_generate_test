@@ -66,7 +66,7 @@ public class generateHAR {
 
 //        driver.get("https://glencore.uat.resource.kryha.dev/user/login/");
 //        driver.findElement(By.xpath("//input[@id='login-email']")).sendKeys("device.kcc.glencore.resource@kryha.io");
-//        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("KXqwc4gLyV");
+//        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("");
 //        WebElement clickButton = driver.findElement(By.xpath("//button[@id='login-button']"));
 //        clickButton.click();
 
