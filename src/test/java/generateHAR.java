@@ -33,27 +33,21 @@ public class generateHAR {
         seleniumProxy.setHttpProxy("localhost:" +myProxy.getPort());
         seleniumProxy.setSslProxy("localhost:" +myProxy.getPort());
 
-//        //3. Add Capability for PROXY in DesiredCapabilities
-//        DesiredCapabilities capability=new DesiredCapabilities();
-//        capability.setCapability(CapabilityType.PROXY, seleniumProxy);
-//        capability.acceptInsecureCerts();
-//        capability.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
 
-        //4. Set captureTypes
+        //3. Set captureTypes
         EnumSet<CaptureType> captureTypes=CaptureType.getAllContentCaptureTypes();
         captureTypes.addAll(CaptureType.getCookieCaptureTypes());
         captureTypes.addAll(CaptureType.getHeaderCaptureTypes());
         captureTypes.addAll(CaptureType.getRequestCaptureTypes());
         captureTypes.addAll(CaptureType.getResponseCaptureTypes());
 
-        //5. setHarCaptureTypes with above captureTypes
+        //4. setHarCaptureTypes with above captureTypes
         myProxy.setHarCaptureTypes(captureTypes);
 
-        //6. HAR name
+        //5. HAR name
         myProxy.newHar("MyHAR");
 
-        //7. Start browser and open URL
-
+        //6. Start browser and open URL
         WebDriverManager.chromedriver().setup();
         ChromeOptions options=new ChromeOptions();
         options.addArguments("--headless");
